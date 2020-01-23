@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+        <meta name=“viewport” content=“width=device-width, initial-scale=1.0” />
         <div id = "head">
             <a href="https://ibb.co/R3C9D7W"></a><img class = "picture" src="https://i.ibb.co/CVBMpXk/Profile.jpg" alt="Profile" border="0">
-            <input type = "text" class = "textbox"  Value = "KARD SAHAPHONG">
+            <h2>  KARD SAHAPHONG </h2>
             <h2> (KARD)</h2>
         </div>
     </head>
-
     <body>
         <div id = "introduce">
             <h3> Introduce myself</h3>
@@ -19,37 +18,30 @@
                  After finish this course I would like to be a programmer.</p>
         </div>
         <div class = "education">
-        <p> <i class="fas fa-graduation-cap"></i> Psychology, Chulalongkorn university</p>
+        <p> <i class="fas fa-graduation-cap"></i>Psychology, Chulalongkorn university</p>
         </div>
         <div class = "hobby">
             <h4 align = "center"> Hobby</h4>
             <ul>
-                <li> Play game</li>
+                <li> play game</li>
                 <li> Reading </li>
                 <li> Listening music</li>
             </ul>
         </div>
         <div class = "skill">
         <h4 align = "center"> Skill</h4>
-        <ul >
+        <ul>
             <li> Psychology</li>
             <li> Psychometric </li>
             <li> English language</li>
-            <form action>
-            <input type = "textbox" class = "skilltextbox">
-            <input type = "button" class = "clear" value = "Clear">
-            </form>
-        </ul> 
+            </li>
+        </ul>
         </div>
-        <input type = "button" onclick = colorred()  value = " red " class = "red">
-        <input type = "button" onclick = colorwhite() value = "white" class = "white">
-        <input type = "button" onclick = colorgreen() value = "Green" class = "green">
+
 
         <style>
-    
 body {
     position: block;
-    top: 50px;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -57,7 +49,7 @@ body {
     background-color: #fceed1;
     border-style: solid;
     border-width: thick;
-    padding: 15px;
+    padding: 2%;
     text-align: center;
     position: relative;
     }
@@ -76,69 +68,41 @@ body {
     padding: 5px;
 
     float: left;
-
-
 }
+
 #introduce {
     background-color: #fceed1;
     border-style: solid;
     text-align: center;
-    
+
 }
 .education {
     background-color: #fceed1;
-    padding-top: 1px;
+    padding-top: 0.5%;
     text-align: center;
     border-style: solid;
-    
+
 }
 
 .hobby, .skill {
     float: left;
     background-color: #fceed1;
     border-style: dashed;
-    width: 49%;
+    width: 48.8%;
 }
+@media screen and (max-width: 600px) {
+    .picture {
+    float: none;
+    top: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .hobby, .skill {
+        width: 100%;
+    }
+    }
 
-.textbox {
-    background-color: #fceed1;
-    border-style: none;
-    text-align: center;
-    font-size: 22pt;
-    font-weight: bold;
-    outline: none;
-}
-
-
-.red {
-    background-color: #FFABA8;
-    border-color: #F3FFE3;
-}
-
-.white {
-    background-color: white;
-    border-color: #F3FFE3;
-}
-.green {
-    background-color: #E7FFAC;
-    border-color: #F3FFE3;
-}
-    
         </style>
-        <script>
-        function colorred() {
-            document.body.style.backgroundColor = "#FFABA8";
-        }
-        function colorwhite() {
-            document.body.style.backgroundColor = "white";
-        }
-        function colorgreen() {
-            document.body.style.backgroundColor = "#E7FFAC";
-        }
-        function skilltextbox() {
-            var skilltextbox = document.getElementsByClassName("skilltextbox");
-            return skilltextbox;
-        }
-        </script>
     </body>
 </html>
