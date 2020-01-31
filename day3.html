@@ -4,10 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
         <div id = "head">
-            <a href="https://ibb.co/R3C9D7W"></a><img class = "picture" src="https://i.ibb.co/CVBMpXk/Profile.jpg" alt="Profile" border="0">
+            <a href="https://ibb.co/R3C9D7W"></a><img class = "picture" src="https://i.ibb.co/CVBMpXk/Profile.jpg" alt="Profile" border="0"
+            onmouseover = "this.src='https://th.glosbe.com/fb_img/meaningImageMedium/c7417753_wikimedia_3613472067275095322_Smiley_head_happy.png'"
+            onmouseout = "this.src='https://i.ibb.co/CVBMpXk/Profile.jpg'">
             <input type = "text" class = "textbox"  Value = "KARD SAHAPHONG">
             <h2> (KARD)</h2>
-        </div>
+            </div>
+        
     </head>
 
     <body>
@@ -21,30 +24,39 @@
         <div class = "education">
         <p> <i class="fas fa-graduation-cap"></i> Psychology, Chulalongkorn university</p>
         </div>
+        <div id ="hobskill">
         <div class = "hobby">
             <h4 align = "center"> Hobby</h4>
-            <ul>
+            <ul id = "hobbylist">
                 <li> Play game</li>
                 <li> Reading </li>
                 <li> Listening music</li>
             </ul>
+        <input type = "text" id = "hobbytext" > 
+        <div id ="hobbybutton">
+        <input type = "button" value = "Add" onclick = addhobby() class = "hobbyadd">
+        <input type ="button" value = "Delete" onclick = removehobby() class = "hobbyremove">
+        </div>
         </div>
         <div class = "skill">
         <h4 align = "center"> Skill</h4>
-        <ul >
+        <ul id = "skilllist">
             <li> Psychology</li>
             <li> Psychometric </li>
             <li> English language</li>
-            <form action>
-            <input type = "textbox" class = "skilltextbox">
-            <input type = "button" class = "clear" value = "Clear">
-            </form>
         </ul> 
-        </div>
+        <input type = "text" id = "skilltext">
+        <div id = "skillbutton">
+        <input type = "button" value = "Add" onclick = addskill() class = "skilladd">
+        <input type ="button" value = "Delete" onclick = removeskill() class = "skillremove">
+    </div>    
+    </div>
+</div>
+        <div id = "colorbutton">
         <input type = "button" onclick = colorred()  value = " red " class = "red">
         <input type = "button" onclick = colorwhite() value = "white" class = "white">
         <input type = "button" onclick = colorgreen() value = "Green" class = "green">
-
+</div>
         <style>
     
 body {
@@ -93,11 +105,12 @@ body {
     
 }
 
+
 .hobby, .skill {
     float: left;
     background-color: #fceed1;
     border-style: dashed;
-    width: 49%;
+    width: 49.2%;
 }
 
 .textbox {
@@ -108,6 +121,7 @@ body {
     font-weight: bold;
     outline: none;
 }
+
 
 
 .red {
@@ -123,7 +137,52 @@ body {
     background-color: #E7FFAC;
     border-color: #F3FFE3;
 }
+
+
+#hobbytext, #skilltext {
+    display: flex;
+    margin: auto;
+    width: 80%;
     
+}
+
+#hobbybutton, #skillbutton {
+    text-align: center;
+    margin-top: 3% ;
+    margin-bottom: 3%;
+}
+
+
+.hobbyremove, .skillremove{
+    margin-left: 10px;
+    
+}
+
+#colorbutton {
+    text-align: center;
+}
+
+
+@media screen and (max-width: 650px) {
+    .picture {
+    float: none;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .hobby, .skill {
+        width: 100%;
+    }
+    .textbox {
+        width: 100%;
+    }
+    #colorbutton {
+        position: relative;
+        top: 10px;
+        margin-bottom: 10px;
+    }
+
+    }
         </style>
         <script>
         function colorred() {
@@ -135,9 +194,38 @@ body {
         function colorgreen() {
             document.body.style.backgroundColor = "#E7FFAC";
         }
-        function skilltextbox() {
-            var skilltextbox = document.getElementsByClassName("skilltextbox");
-            return skilltextbox;
+        document.getElementsByClassName("skillbutton").onclick = function() {
+            var text = document.getElementsByClassName("skilltext").value;
+            var ul = "<ul>" + text + "</ul>";
+            document.getElementsByClassName("skilllist").appendChild(ul);
+        }
+        function addskill() {
+            var node = document.createElement("li");
+            var text = document.getElementById("skilltext").value;
+            var textnode = document.createTextNode(text);
+
+            node.appendChild(textnode);
+            document.getElementById("skilllist").appendChild(node);
+
+            document.getElementById("skilltext").value = "";
+        }
+        function removeskill() {
+            var list = document.getElementById("skilllist");
+            list.removeChild(list.lastElementChild);
+        }
+        function addhobby() {
+            var node = document.createElement("li");
+            var text = document.getElementById("hobbytext").value;
+            var textnode = document.createTextNode(text);
+
+            node.appendChild(textnode);
+            document.getElementById("hobbylist").appendChild(node);
+
+            document.getElementById("hobbytext").value = "";
+        }
+        function removehobby() {
+            var list = document.getElementById("hobbylist");
+            list.removeChild(list.lastElementChild);
         }
         </script>
     </body>
