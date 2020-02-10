@@ -6,7 +6,65 @@
     <title>Booking</title>
     <style>
         .container {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: 100px 100px 100px 100px;
+            text-align: left;
+            justify-content: center;
+        }
+        .flyingfrom {
+            grid-column: 1;
+            grid-row: 1;
+            
+        }
+        .flyingto {
+            grid-column: 3;
+            grid-row:1;
+        }
+        .departing {
+            grid-column : 1;
+            grid-row:2;
+        }
+        .returning {
+            grid-column: 3;
+            grid-row:2;
+        }
+        .adult {
+            grid-column: 1;
+            grid-row:3;
+        }
+        .child {
+            grid-column:2;
+            grid-row:3;
+        }
+        .infant {
+            grid-column:3;
+            grid-row:3;
+        }
+        .currency {
+            grid-column:4;
+            grid-row:3;
+            color: red;
+        }
+        .search {
+            grid-column: 1;
+            grid-row: 4;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            padding: 7px;
+            border-color: red;
+            border-radius: 4px;
+        }
+        select {
+            width: 150px;
+        }
+        .firstrow, .secondrow {
+            width: 150px;
+        }
+        .thirdrow {
+            width: 50px;
         }
     </style>
 </head>
@@ -14,21 +72,55 @@
     <div class = "container">
         <div class = "flyingfrom">
             <p> Flying from</p>
-            <select name = "place">
+            <select name = "place" class = "toprow">
                 <option> Suwannaphum</option>
                 <option> Don-muang</option>
                 <option> Chiang-mai</option>
                 <option> Phuket</option>
             </select>
-            <div class = "flyingto">
+        </div>
+        <div class = "flyingto">
             <p> To</p>
-            <select name = "place">
+            <select name = "place" class = "toprow">
                 <option> Suwannaphum</option>
                 <option> Don-muang</option>
                 <option> Chiang-mai</option>
                 <option> Phuket</option>
             </select>
+        </div>
+        <div class = "departing">
+            <p> Departing</p>
+            <input type = "date" class = "secondrow">
             </div>
+        <div class = "returning">
+            <p> Returning</p>
+            <input type = "date" class = "secondrow">
+        </div>
+        <div class = "adult">
+            <p>Adult</p>
+            <input type = "number" class = "thirdrow">
+        </div>
+        <div class = "child">
+            <p>Child</p>
+            <input type = "number" class = "thirdrow">
+        </div>
+        <div class = "infant">
+            <p>Infant</p>
+            <input type = "number" class = "thirdrow">
+        </div>
+        <div class = "currency" class = "thirdrow">
+            <p>Currency</p>
+            <select class = "thirdrow">
+                <option>THB</option>
+                <option>JPY</option>
+                <option>USD</option>
+            </select>
+        </div>
+        <div class = "search">
+            <input type = "submit" value = "SEARCH" class = "button">
+        </div>
+
+
         </div>
     </div>
 </body>
