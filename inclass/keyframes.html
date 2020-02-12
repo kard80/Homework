@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one {
+        background-color: aqua;
+        width: 20vw;
+        height: 20vw;
+        margin: 0 auto;
+        position: absolute;
+        animation: moveright 5s infinite;
+        
+    }
+    .two {
+            background-color: blue;
+            width: 20vw;
+            height: 20vw;
+            position: absolute;
+            margin-top: 0px;
+            right: 0px;
+            animation: hide 5s infinite;
+        }
+    @keyframes 
+    color {
+        from {background-color: aqua; top: 0px;}
+        to {background-color: red;top: 200px;}
+    }
+    @keyframes
+    moveright {
+        0% {left: 0px; background-color: purple;}
+        20%{left: 10px;background-color:blue;}
+        40% {left: 20%;background-color:green;}
+        60% {left: 20%; background-color:blue;}
+        100% {left: 0px; display: purple;}
+    }
+    @keyframes
+    hide {
+        from {visibility: hidden; opacity: 0;}
+        to {visibility: visible; opacity: 1;}
+    }
+</style>
+<body>
+    <div class = "one"></div>
+    <div class = "two"></div>
+    <div></div>
+</body>
+</html>
