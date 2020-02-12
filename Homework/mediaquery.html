@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    body{
+        height: 200vh;
+        width: 100vw;
+        top: 0px;
+        margin: 0;
+        left: 0px;
+        font-family: sans-serif;
+        background-repeat: repeat-x;
+    }
+    img {
+        position: absolute;
+        z-index: -1;
+        background-position: center;
+        width: 100%;
+        height: 90%;
+
+    }
+    .form {
+        background-color: white;
+        margin: 60vh auto;
+        text-align:left;
+        width: 50%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(5,140px);
+        height:100vh;
+        border-radius: 40px;
+        vertical-align: center;
+        box-shadow: 3px 3px 10px gray;
+    }
+    .rowone {
+        grid-column: 1 / 3;
+        grid-row:1;
+        text-align: center;
+        font-size: 57px;
+        font-weight: 700;
+
+
+    }
+
+    .rowtwo{
+        grid-column: 1;
+        grid-row:2;
+        margin-left: 25%;
+
+    }
+    .rowtwotwo{
+        grid-column: 2;
+        grid-row:2;
+        margin-right: 25%;
+    }
+    .rowthree {
+        grid-column: 1/4;
+        grid-row:3;
+        margin-left: 13%;
+    }
+    .rowfour {
+        grid-column: 1/4;
+        grid-row: 4;
+        margin-left: 13%;
+    }
+    .rowfive {
+        grid-column: 1/4;
+        grid-row:6;
+        margin: 0 auto;
+
+    }
+    .button {
+        background-color: red;
+        color: white;
+        border-radius: 5px;
+        border-color: #e91126;
+        font-size: 30px;
+        padding: 5px 60px;
+
+
+    }
+    .textsubject {
+        height: 30px;
+        border: 1px solid #e6e3e3;
+        border-radius: 5px;
+    }
+    .textsubject2 {
+        width: 100%;
+        height: 30px;
+        border: 1px solid #e6e3e3;
+        border-radius: 5px; 
+    }
+
+    p {
+        color: #636363;
+    }
+    @media only screen and (max-width: 640px) {
+        .form {
+            width: 80vw;
+            grid-template-rows: repeat(7,140px);
+            grid-template-columns: 100%;
+            text-align: left;
+        }
+        .rowtwo {
+            margin-left: 10%;
+        }
+        .rowtwotwo {
+            grid-column: 1;
+            grid-row: 3;
+            margin-left: 10%;
+            margin-right: 0%;
+        }
+        .rowthree {
+            grid-column: 1;
+            grid-row: 4;
+            margin-left: 10%;
+        }
+        .rowfour {
+            grid-column:1;
+            grid-row:5;
+            margin-left: 10%;
+        }
+        .rowfive {
+            grid-column: 1;
+            grid-row:7;
+            margin-left: 10%;
+        }
+        .textsubject2 {
+            width: 90%;
+            margin: 0px;
+        }
+    }
+
+</style>
+<body>
+    <div class = "container">
+        <div class = "background">
+            <img src = "https://www.pimclick.com/wp-content/uploads/2018/11/contact-banner.jpg">
+        </div>
+        <div class ="form">
+            <h3 class = "rowone"> Contact us <span style ="color:red;">today</span></h3>
+            <div class = "rowtwo">
+            <p>Your Name (required)</p>
+            <input type = "textbox" style = "width: 90%;" class = "textsubject">
+            </div>
+            <div class = "rowtwotwo"> 
+                <p> Your Email (required)</p>
+                <input type = "textbox" class = "textsubject2">
+            </div>
+            <div class = "rowthree">
+                <p> Subject</p>
+                <input type = "textbox" class = "textsubject" style = "width:85%";>
+            </div>
+            <div class = "rowfour">
+                <p>Your Message</p>
+                <input type = "textbox" style = "width:85%; height: 70%;" class = "textsubject">
+            </div>
+            <div class = "rowfive">
+                <input type = "button" value = "send" class = "button">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html> 
